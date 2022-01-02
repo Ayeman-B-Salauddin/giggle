@@ -1,7 +1,7 @@
 ![giggle](https://i.ibb.co/z7vqLkF/Giggle-A-search-engine.png)
 
 
-This is a [`Search Engine`](https://giggle-search-engine.netlify.app/search) project bootstrapped with create-next-app.
+This is a [`Search Engine`](https://giggle-search-engine.netlify.app) project bootstrapped with create-next-app.
 
 ## Getting Started
 First, install dependencies:
