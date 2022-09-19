@@ -11,12 +11,16 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.5",
     "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-player": "^2.11.0",
     "react-router-dom": "6.4.0",
-    "sass": "^1.54.9"
+    "sass": "^1.54.9",
+    "use-debounce": "^8.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

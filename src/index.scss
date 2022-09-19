@@ -5,3 +5,39 @@ html, body {
     padding: 0;
     font-family: "Nunito", sans-serif;
 }
+
+.description {
+    text-decoration: none;
+    color: gray;
+}
+
+.eachSearch {
+    background-color: rgb(248, 248, 248);
+    margin: 3em;
+    padding: 1em;
+
+    .searchField {
+        text-decoration: none;
+    }
+}
+
+.links {
+    text-decoration: none;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 3em;
+    .logoLink{
+       text-decoration: none; 
+       color: rgb(255, 196, 87);
+       background-color: rgb(255, 239, 239);
+       border-radius: 20%;
+       display: flex;
+       align-items: center;
+       padding: 0.3em;
+       margin: .5em;
+    }
+}

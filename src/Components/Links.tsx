@@ -1,3 +1,5 @@
+import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const links = [
@@ -8,11 +10,41 @@ const links = [
 ];
 
 export const Links = () => {
+  const [alignment, setAlignment] = useState("🔎 All");
+
+  const handleChange = (
+    event: React.MouseEvent<HTMLElement>,
+    newAlignment: string
+  ) => {
+    setAlignment(newAlignment);
+  };
   return (
-    <section>
-      {links.map(({ url, text }) => (
-        <Link to={url}>{text}</Link>
+    <ToggleButtonGroup
+      color="primary"
+      value={alignment}
+      exclusive
+      onChange={handleChange}
+      aria-label="Platform"
+    >
+      {links.map(({ url, text }, i) => (
+        <Link className="links" key={i} to={url}>
+          <ToggleButton value={text}>{text}</ToggleButton>
+        </Link>
       ))}
-    </section>
+    </ToggleButtonGroup>
   );
 };
+
+{
+  /* <ToggleButtonGroup
+color="primary"
+value={alignment}
+exclusive
+onChange={handleChange}
+aria-label="Platform"
+>
+<ToggleButton value="web">Web</ToggleButton>
+<ToggleButton value="android">Android</ToggleButton>
+<ToggleButton value="ios">iOS</ToggleButton>
+</ToggleButtonGroup> */
+}
