@@ -1,4 +1,4 @@
-import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -19,19 +19,23 @@ export const Links = () => {
     setAlignment(newAlignment);
   };
   return (
-    <ToggleButtonGroup
-      color="primary"
-      value={alignment}
-      exclusive
-      onChange={handleChange}
-      aria-label="Platform"
-    >
-      {links.map(({ url, text }, i) => (
-        <Link className="links" key={i} to={url}>
-          <ToggleButton value={text}>{text}</ToggleButton>
-        </Link>
-      ))}
-    </ToggleButtonGroup>
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <ToggleButtonGroup
+        color="primary"
+        value={alignment}
+        exclusive
+        onChange={handleChange}
+        aria-label="Platform"
+      >
+        {links.map(({ url, text }, i) => (
+          <ToggleButton value={text}>
+            <Link className="links" key={i} to={url}>
+              {text}
+            </Link>
+          </ToggleButton>
+        ))}
+      </ToggleButtonGroup>
+    </Box>
   );
 };
 

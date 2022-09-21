@@ -25,7 +25,7 @@ export const ResultContextProvider = ({ children }: any) => {
         "x-user-agent": "desktop",
         "x-proxy-location": "US",
         "x-rapidapi-host": "google-search3.p.rapidapi.com",
-        "x-rapidapi-key": "4fa6f13d0dmsha7f8a21f8b18db6p18a245jsnef03f9396297",
+        "x-rapidapi-key": import.meta.env.VITE_API_KEY,
       },
     });
     const data = await res.json();
