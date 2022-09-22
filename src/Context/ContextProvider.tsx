@@ -9,7 +9,7 @@ type ResultContextProviderProps = {
   loading: boolean;
 };
 const ResultContext = createContext<any>(null);
-const baseUrl = "https://google-search3.p.rapidapi.com/api/v1/search";
+const baseUrl = "https://google-search3.p.rapidapi.com/api/v1";
 
 export const ResultContextProvider = ({ children }: any) => {
   const [results, setResults] = useState([]);

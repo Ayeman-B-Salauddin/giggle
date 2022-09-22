@@ -3,10 +3,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const links = [
-  { url: "/search", text: "🔎 All" },
+  { url: "/", text: "🔎 All" },
   { url: "/news", text: "📰 News" },
-  { url: "/images", text: "📸 Images" },
-  { url: "/videos", text: "📺 Videos" },
+  { url: "/image", text: "📸 Images" },
+  { url: "/video", text: "📺 Videos" },
 ];
 
 export const Links = () => {
@@ -38,17 +38,3 @@ export const Links = () => {
     </Box>
   );
 };
-
-{
-  /* <ToggleButtonGroup
-color="primary"
-value={alignment}
-exclusive
-onChange={handleChange}
-aria-label="Platform"
->
-<ToggleButton value="web">Web</ToggleButton>
-<ToggleButton value="android">Android</ToggleButton>
-<ToggleButton value="ios">iOS</ToggleButton>
-</ToggleButtonGroup> */
-}

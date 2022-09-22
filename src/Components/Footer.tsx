@@ -1,5 +1,9 @@
 export const Footer = () => (
-  <div className="text-center p-10 mt-10 border-t dark:border-gray-700 border-gray-200 ">
-    © 2021 Giggle, Inc.
-  </div>
+  <footer className="footer">
+    © 2022 Giggle, Inc.
+    <br />
+    <a href="#" className="sourceCode">
+      Source Code (Github Link)
+    </a>
+  </footer>
 );
