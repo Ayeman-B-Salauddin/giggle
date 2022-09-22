@@ -1,7 +1,6 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
-import ClearIcon from "@mui/icons-material/Clear";
 import { useResultContext } from "../Context/ContextProvider";
 import { Links } from "./Links";
 
@@ -11,7 +10,7 @@ export const Search = () => {
   const [debouncedValue] = useDebounce(text, 300);
 
   useEffect(() => {
-    if (debouncedValue) setSearchTerm(debouncedValue); // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (debouncedValue) setSearchTerm(debouncedValue);
   }, [debouncedValue]);
 
   return (

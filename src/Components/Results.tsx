@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import ReactPlayer from "react-player";
 import {
   Button,
   Card,
@@ -33,41 +32,49 @@ export const Results = () => {
   return (
     <>
       <CssBaseline />
+
+      {/* SEARCH */}
+
       {location.pathname === "/" && (
         <section className="result">
-          {results?.results?.map(({ link, title, description }, index) => (
-            <article key={index} className="eachSearch">
-              <a
-                className="search"
-                href={link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Typography
-                  color="primary"
-                  variant="caption"
-                  display="block"
-                  gutterBottom
+          {results?.results?.map(
+            ({ link, title, description }: any, index: any) => (
+              <article key={index} className="eachSearch">
+                <a
+                  className="search"
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  {link.length > 30 ? link.substring(0, 30) : link}{" "}
-                </Typography>
-                <Typography
-                  color="blue"
-                  variant="button"
-                  display="block"
-                  gutterBottom
-                >
-                  {title}
-                </Typography>
-                <p className="description">{description}</p>
-              </a>
-            </article>
-          ))}
+                  <Typography
+                    color="primary"
+                    variant="caption"
+                    display="block"
+                    gutterBottom
+                  >
+                    {link.length > 30 ? link.substring(0, 30) : link}{" "}
+                  </Typography>
+                  <Typography
+                    color="blue"
+                    variant="button"
+                    display="block"
+                    gutterBottom
+                  >
+                    {title}
+                  </Typography>
+                  <p className="description">{description}</p>
+                </a>
+              </article>
+            )
+          )}
         </section>
       )}
+
+      {/* NEWS */}
+
       {location.pathname === "/news" && (
         <section className="newsParent">
-          {results?.entries?.map(({ id, links, source, title }) => (
+          {results?.entries?.map(({ id, links, source, title }: any) => (
             <Card
               sx={{
                 minWidth: 275,
@@ -105,10 +112,13 @@ export const Results = () => {
           ))}
         </section>
       )}
+
+      {/* IMAGE */}
+
       {location.pathname === "/image" && (
         <section className="images">
           {results?.image_results?.map(
-            ({ image, link: { href, title } }, index) => (
+            ({ image, link: { href, title } }: any, index: any) => (
               <a
                 href={href}
                 target="_blank"
@@ -128,7 +138,10 @@ export const Results = () => {
           )}
         </section>
       )}
-      {location.pathname === "/video" && (
+
+      {/* VIDEO */}
+
+      {/* {location.pathname === "/video" && (
         <div className="flex flex-wrap ">
           {results?.results?.map((video, index) => (
             <div key={index} className="p-2">
@@ -141,7 +154,7 @@ export const Results = () => {
             </div>
           ))}
         </div>
-      )}
+      )} */}
     </>
   );
 };
