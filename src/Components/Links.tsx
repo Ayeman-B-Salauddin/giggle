@@ -28,7 +28,7 @@ export const Links = () => {
         aria-label="Platform"
       >
         {links.map(({ url, text }, i) => (
-          <ToggleButton value={text}>
+          <ToggleButton value={text} key={i}>
             <Link className="links" key={i} to={url}>
               {text}
             </Link>
