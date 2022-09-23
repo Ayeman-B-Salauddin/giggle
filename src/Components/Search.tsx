@@ -45,10 +45,10 @@ export const Search = () => {
   }, [debouncedValue]);
 
   return (
-    <div className="relative sm:ml-48 md:ml-72 sm:-mt-10 mt-3">
+    <>
       <Box
         sx={{
-          width: 500,
+          width: 370,
           maxWidth: "100%",
         }}
       >
@@ -64,6 +64,6 @@ export const Search = () => {
       <br />
       <Links />
       {/* <Dictaphone /> */}
-    </div>
+    </>
   );
 };
