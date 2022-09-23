@@ -23,6 +23,8 @@ const Dictaphone = () => {
   return (
     <div>
       <p>Microphone: {listening ? "on" : "off"}</p>
+      {/* 
+      //@ts-ignore */}
       <button onClick={SpeechRecognition.startListening}>Start</button>
       <button onClick={SpeechRecognition.stopListening}>Stop</button>
       <button onClick={resetTranscript}>Reset</button>
@@ -30,6 +32,7 @@ const Dictaphone = () => {
     </div>
   );
 };
+
 export default Dictaphone;
 
 export const Search = () => {
@@ -60,7 +63,7 @@ export const Search = () => {
       </Box>
       <br />
       <Links />
-      <Dictaphone />
+      {/* <Dictaphone /> */}
     </div>
   );
 };
